@@ -1,0 +1,23 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+aside {
+    border: 1px solid black;
+}
+
+canvas{
+    border: 1px solid black;
+    width: 80%;
+    height: 80%;
+}
+
+footer{
+    border: 1px solid black;
+    height:10%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
