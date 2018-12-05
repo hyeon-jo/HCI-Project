@@ -1,18 +1,43 @@
 let pos = {
     drawable: false,
-    stroke: [],
+    strokes: [],
+    currentStroke: [],
     boundingClientRect: null,
+    commits: new Map(),
 };
 let canvas, ctx;
 let commitButton;
+let commitMessageTextArea;
+let showButton;
+let showTextArea;
 
 window.onload = function(){
     canvas = document.getElementById("mainCanvas");
     ctx = canvas.getContext("2d");
     commitButton = document.getElementById("commitButton");
+    commitMessageTextArea = document.getElementById("commitMessage");
 
     commitButton.onclick = function() {
-        console.log('click');
+        pos.commits.set(commitMessageTextArea.value,
+            pos.strokes.slice());
+
+        console.log(pos.commits);
+
+        commitMessageTextArea.value = "";
+    };
+
+    showButton = document.getElementById("showCommitButton");
+    showTextArea = document.getElementById("showCommit");
+
+    showButton.onclick = function() {
+        const commit = pos.commits.get(showTextArea.value);
+
+        if (commit === undefined || commit === null) {
+            console.log("There doesn't exist the object which has key: " + showTextArea);
+            return;
+        }
+
+        pos.strokes = commit;
     };
 
     canvas.addEventListener("mousedown", listener);
@@ -26,6 +51,22 @@ window.onload = function(){
 };
 
 function OnDraw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (const stroke of pos.strokes) {
+        ctx.beginPath();
+
+        ctx.moveTo(stroke[0][0], stroke[0][1]);
+
+        for (let i = 1; i < stroke.length; ++i) {
+            const x = stroke[i][0];
+            const y = stroke[i][1];
+
+            ctx.lineTo(x, y);
+        }
+
+        ctx.stroke();
+    }
 }
 
 function listener(event) {
@@ -45,18 +86,19 @@ function listener(event) {
 }
 
 function initDraw(event){
-    ctx.beginPath();
     pos.drawable = true;
-    ctx.moveTo(x(event), y(event));
+    pos.currentStroke = [];
+    pos.currentStroke.push([x(event), y(event)]);
+    pos.strokes.push(pos.currentStroke);
 }
 
 function draw(event){
-    ctx.lineTo(x(event), y(event));
-    ctx.stroke();
+    pos.currentStroke.push([x(event), y(event)]);
 }
 
 function finishDraw(){
     pos.drawable = false;
+    pos.currentStroke = null;
 }
 
 window.addEventListener("resize", resize);
