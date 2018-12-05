@@ -1,20 +1,32 @@
-
-var pos = {
+let pos = {
     drawable: false,
-    x: -1,
-    y: -1
+    stroke: [],
+    boundingClientRect: null,
 };
-var canvas, ctx;
+let canvas, ctx;
+let commitButton;
 
 window.onload = function(){
-    canvas = document.getElementById("canvas");
+    canvas = document.getElementById("mainCanvas");
     ctx = canvas.getContext("2d");
+    commitButton = document.getElementById("commitButton");
+
+    commitButton.onclick = function() {
+        console.log('click');
+    };
 
     canvas.addEventListener("mousedown", listener);
     canvas.addEventListener("mousemove", listener);
     canvas.addEventListener("mouseup", listener);
     canvas.addEventListener("mouseout", listener);
+
+    pos.boundingClientRect = canvas.getBoundingClientRect();
+
+    setInterval(OnDraw, 1.0 / 60.0 * 1000.0);
 };
+
+function OnDraw() {
+}
 
 function listener(event) {
     switch(event.type){
@@ -26,7 +38,7 @@ function listener(event) {
                 draw(event);
             break;
         case "mouseout":
-        case"mouseup":
+        case "mouseup":
             finishDraw();
             break;
     }
@@ -35,35 +47,30 @@ function listener(event) {
 function initDraw(event){
     ctx.beginPath();
     pos.drawable = true;
-    var coors = getPosition(event);
-    pos.X = coors.X;
-    pos.Y = coors.Y;
-    ctx.moveTo(pos.X, pos.Y);
+    ctx.moveTo(x(event), y(event));
 }
 
 function draw(event){
-    var coors = getPosition(event);
-    ctx.lineTo(coors.X, coors.Y);
-    pos.X = coors.X;
-    pos.Y = coors.Y;
+    ctx.lineTo(x(event), y(event));
     ctx.stroke();
 }
 
 function finishDraw(){
     pos.drawable = false;
-    pos.X = -1;
-    pos.Y = -1;
-}
-
-function getPosition(event){
-    var x = event.pageX - canvas.offsetLeft;
-    var y = event.pageY - canvas.offsetTop;
-    return {X: x, Y: y}
 }
 
 window.addEventListener("resize", resize);
 function resize(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    draw();
+
+    pos.boundingClientRect = canvas.getBoundingClientRect();
+}
+
+function x(event) {
+    return event.x - pos.boundingClientRect.left;
+}
+
+function y(event) {
+    return event.y - pos.boundingClientRect.top;
 }
