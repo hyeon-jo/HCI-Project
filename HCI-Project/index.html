@@ -21,9 +21,58 @@
             <button class="button" id="pen-red" type="button"><img class="buttonImage" src="imgs/pen_red.png"></button>
             <button class="button" id="eraser" type="button"><img class="buttonImage" src="imgs/eraser.png"></button>
             <button class="button" id="text" type="button"><img class="buttonImage" src="imgs/text.png"></button>
-            <button class="button" id="commitButton" type="button"><img class="buttonImage" src="imgs/commit.png"></button>
-            <!--<label for="commitMessage">commit message</label><textarea id="commitMessage"></textarea>-->
-            <button class="button" id="showCommitButton" type="button"><img class="buttonImage" src="imgs/button_search.png"></button>
+            <button class="button" id="commitModalButton" type="button" data-toggle="modal" data-target="#commitModal">
+                <img class="buttonImage" src="imgs/commit.png">
+            </button>
+
+            <!-- Commit Modal -->
+            <div class="modal fade" id="commitModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel">Commit Message</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>commit message</h6>
+                            <textarea id="commitMessage"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="commitButton">Commit</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="button" id="showCommitModalButton" type="button" data-toggle="modal" data-target="#showCommitModal">
+                <img class="buttonImage" src="imgs/button_search.png">
+            </button>
+
+
+            <!-- Show Commit Modal -->
+            <div class="modal fade" id="showCommitModal" tabindex="-1" role="dialog" aria-labelledby="showCommitModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="showCommitModalLabel">Commit Message</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>commit message</h6>
+                            <textarea id="showCommit"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="showCommitButton">Commit</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--<label for="showCommit">commit message</label><textarea id="showCommit"></textarea>-->
         </nav>
     </div>

@@ -34,6 +34,11 @@ html, body{
     position: relative;
 }
 
+#commitMessage, #showCommit{
+    height: 100px;
+    width: 450px;
+}
+
 .button{
     margin: 3px;
     padding: 2px;
