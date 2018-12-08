@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8a953949-2189-4009-8924-d0f7c1c4d233" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HCI-Project/css/main_view.css" beforeDir="false" afterPath="$PROJECT_DIR$/HCI-Project/css/main_view.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HCI-Project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HCI-Project/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,11 +19,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HCI-Project/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="483">
+              <caret line="66" column="65" lean-forward="true" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
               <folding>
                 <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="e#1888#1895#1" expanded="true" />
                 <element signature="e#3376#3383#1" expanded="true" />
               </folding>
@@ -131,15 +129,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544240893209</updated>
-      <workItem from="1544240895955" duration="8872000" />
+      <workItem from="1544240895955" duration="9230000" />
     </task>
+    <task id="LOCAL-00001" summary="make the commit &amp; find button activity">
+      <created>1544256089687</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544256089687</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8872000" />
+    <option name="totallyTimeSpent" value="9230000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="383" y="289" width="1664" height="1184" extended-state="0" />
+    <frame x="1092" y="261" width="1664" height="1184" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -163,6 +169,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="make the commit &amp; find button activity" />
+    <option name="LAST_COMMIT_MESSAGE" value="make the commit &amp; find button activity" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hci-project_B.html">
@@ -206,11 +216,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HCI-Project/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        <state relative-caret-position="483">
+          <caret line="66" column="65" lean-forward="true" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
           <folding>
             <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="e#1888#1895#1" expanded="true" />
             <element signature="e#3376#3383#1" expanded="true" />
           </folding>
