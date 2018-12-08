@@ -11,10 +11,30 @@
 </head>
 <body>
     <div id="container">
+        <!-- Canvas -->
         <canvas class="main_common" id="mainCanvas" height="600" width="800"></canvas>
-        <div class="main_common" id="history">
+
+        <!-- History Components -->
+        <div class="main_common list-group" id="history">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">First Commit</h5>
+                    <small>2018-12-08</small>
+                </div>
+                <p class="mb-1">This commit for initiating.</p>
+                <small>By Hyeon</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Second Commit</h5>
+                    <small>2018-12-09</small>
+                </div>
+                <p class="mb-1">Save initial idea.</p>
+                <small>By Hyeon</small>
+            </a>
         </div>
 
+        <!-- Tool Box and Buttons -->
         <nav class="navbar navbar-light rounded" style="background-color: #e0e0e0;" id="controls">
             <button class="button" id="pen-black" type="button"><img class="buttonImage" src="imgs/pen.png"></button>
             <button class="button" id="pen-blue" type="button"><img class="buttonImage" src="imgs/pen_blue.png"></button>

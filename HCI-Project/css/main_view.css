@@ -11,7 +11,7 @@ html, body{
 #container {
     border: 1px solid red;
     height: 620px;
-    width: 1000px;
+    width: 1120px;
     position: relative;
 }
 
@@ -22,8 +22,10 @@ html, body{
 #history{
     border: 1px solid blue;
     height: 600px;
-    width: 180px;
-    left: 610px;
+    width: 300px;
+    left: 810px;
+    top: 0px;
+    position: absolute;
 }
 
 #controls {
