@@ -1,0 +1,45 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.main_common{
+    display: inline-block;
+}
+
+#container {
+    border: 1px solid red;
+    height: 620px;
+    width: 1000px;
+    position: relative;
+}
+
+#mainCanvas{
+    border: 1px solid black;
+}
+
+#history{
+    border: 1px solid blue;
+    height: 600px;
+    width: 180px;
+    left: 610px;
+}
+
+#controls {
+    bottom: 100px;
+    left: 160px;
+    width: 400px;
+    height: 50px;
+    position: relative;
+}
+
+.button{
+    margin: 3px;
+    padding: 2px;
+}
+
+.button, .buttonImage{
+    /*background-color: ;*/
+    border: None;
+}
